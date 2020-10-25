@@ -1,23 +1,21 @@
 import React from 'react'
-import { push } from 'connected-react-router'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-const Home = (props) => (
-  <div>
-    Hello
-  </div>
-)
+import { fetchUser } from '../../modules/user'
 
-const mapStateToProps = ({ counter }) => ({
+const Home = (props) => {
+console.log(props);
+props.fetchUser();
+return <div>
+    Hello {JSON.stringify(props.user)}
+  </div>;
+} 
+  
+
+
+const mapStateToProps = ({ counter, user }) => ({
+  user
 })
 
-const mapDispatchToProps = (dispatch) =>
-  bindActionCreators(
-    {
-      changePage: () => push('/about-us'),
-    },
-    dispatch
-  )
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, { fetchUser })(Home)
