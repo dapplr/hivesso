@@ -10,57 +10,13 @@ const BLACK_COLOR = '#1A172B'
 const WHITE_COLOR = '#F0F0F8'
 
 const HIVE_LOGO_COLOR = '#E31337'
-
-const DEFAULT_THEME_TYPE = 'MARINA'
 const FONT_FAMILY = 'Montserrat'
-
-const GREY = {
-  darker: '#6F6D78',
-  medium: '#C5C3CF',
-  light: '#DDDBE5',
-  lighter: '#F0F0F8',
-}
-
-var activeTheme = {
-  main: '#7666C8',
-  light: '#F6F1FF',
-  borderWidth: 0.25,
-  primary: '#7666C8',
-  GREY: {
-    primary: GREY['medium'],
-    secondary: GREY['light'],
-  },
-  background: '#231D41',
-  background50: 'rgba(118,102,200 , 0.7)',
-  primaryText: WHITE_COLOR,
-  secondaryText: '#1A172B',
-}
 
 const theme = createMuiTheme({
   palette: {
     primary: {
       main: '#7666C8',
       light: '#F6F1FF',
-      LIGHT: {
-        borderWidth: 0.5,
-        GREY: {
-          primary: GREY['darker'],
-          secondary: GREY['medium'],
-        },
-        background: '#E6E3F5',
-        primaryText: '#1A172B',
-        secondaryText: WHITE_COLOR,
-      },
-      DARK: {
-        borderWidth: 0.25,
-        GREY: {
-          primary: GREY['medium'],
-          secondary: GREY['light'],
-        },
-        background: '#231D41',
-        primaryText: WHITE_COLOR,
-        secondaryText: '#1A172B',
-      },
     },
     secondary: {
       main: '#19857b',
@@ -73,6 +29,12 @@ const theme = createMuiTheme({
     },
     common: {
       black: '#1A172B',
+      grey: {
+        darker: '#6F6D78',
+        medium: '#C5C3CF',
+        light: '#DDDBE5',
+        lighter: '#F0F0F8',
+      },
     },
     grey: {
       dark: '#6F6D78',
@@ -98,11 +60,11 @@ const theme = createMuiTheme({
   },
   customSpacing: {
     desktop: {
-      globalPaddingH: 30,
+      globalPaddingH: 400,
       headerSpacing: 60,
     },
     mobile: {
-      globalPaddingH: 12,
+      globalPaddingH: 40,
       normalSpacing: 16,
       headerSpacing: 40,
     },
@@ -112,4 +74,4 @@ const theme = createMuiTheme({
 
 export default theme
 
-export { activeTheme, WHITE_COLOR }
+export { WHITE_COLOR }
