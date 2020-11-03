@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { isCompositeComponent } from 'react-dom/test-utils';
 
 const api = {
   get: ({url, config = {}}) => {
@@ -8,7 +9,8 @@ const api = {
     return axios.post.bind(this, url, body, config);
   },
   dispatchApiRequest: async ({ api, dispatch, actions=[],}) => {
-    const res = await api.call();
+    const res = await api();
+    console.log(res);
     if (res.status === 200) {
       actions[1] && dispatch({type: actions[1], payload: res.data});
     } else {

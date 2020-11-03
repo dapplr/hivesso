@@ -1,7 +1,5 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { WHITE_COLOR } from "../../theme";
-const { Container } = require("@material-ui/core");
 
 const useStyles = (props) => {
   const theme = useTheme();
@@ -13,7 +11,7 @@ const useStyles = (props) => {
       [direction === "horizontal" ? "paddingTop" : "paddingLeft"]: "50%",
       [direction === "horizontal"
         ? "borderBottom"
-        : "borderRight"]: `1px solid ${theme.palette.common.grey.light}`,
+        : "borderRight"]: `2px solid ${theme.palette.common.grey.light}`,
       "-webkit-animation": `${direction} ${durationSeconds} ease`,
       "-moz-animation": `${direction} ${durationSeconds} ease`,
       "-o-animation": `${direction} ${durationSeconds} ease`,
@@ -54,7 +52,6 @@ const AnimateLine = (props) => {
     direction,
     durationSeconds,
   });
-  console.log(size);
   return <div className={classes.root} {...other}></div>;
 };
 
