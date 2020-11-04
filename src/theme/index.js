@@ -1,16 +1,17 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import red from '@material-ui/core/colors/red'
 
-const DANGER_COLOR = '#D82A48'
-const DANGER_COLOR_DARK = '#F21E2B'
-const WARNING_COLOR = 'red'
-const SUCCESS_COLOR = 'green'
+export const DANGER_COLOR = '#D82A48'
+export const DANGER_COLOR_DARK = '#F21E2B'
+export const WARNING_COLOR = 'red'
+export const SUCCESS_COLOR = 'green'
 
-const BLACK_COLOR = '#1A172B'
-const WHITE_COLOR = '#F0F0F8'
+export const BLACK_COLOR = '#1A172B'
+export const WHITE_COLOR = '#F0F0F8'
 
-const HIVE_LOGO_COLOR = '#E31337'
-const FONT_FAMILY = 'Montserrat'
+export const HIVE_LOGO_COLOR = '#E31337'
+export const HIVE_LOGO_HIGHLIGHTED_COLOR = '#CA082A'
+export const FONT_FAMILY = 'Montserrat'
 
 const theme = createMuiTheme({
   palette: {
@@ -28,7 +29,6 @@ const theme = createMuiTheme({
       default: '#fff',
     },
     common: {
-      black: '#1A172B',
       grey: {
         darker: '#6F6D78',
         medium: '#C5C3CF',
@@ -53,7 +53,9 @@ const theme = createMuiTheme({
     size: {
       normal: 16,
     },
-    // button: {},
+    button: {
+      textTransform: "none"
+    }
   },
   borderRadius: {
     sm: 8,
@@ -74,4 +76,3 @@ const theme = createMuiTheme({
 
 export default theme
 
-export { WHITE_COLOR }

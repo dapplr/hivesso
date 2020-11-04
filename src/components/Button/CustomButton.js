@@ -27,7 +27,6 @@ const CustomButton = (props) => {
     ...other
   } = props
   const classes = useStyles({ backgroundColor, hoverColor, minWidth })
-  console.log(props)
   return (
     <Button className={classes.root + ' ' + className} {...other}>
       {children}
