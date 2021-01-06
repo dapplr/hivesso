@@ -6,6 +6,7 @@ import AnimateLine from "../../components/AnimateLine/AnimateLine";
 import CustomInput from "../../components/Input/CustomInput";
 import { fetchUser, onUserInput } from "../../modules/user";
 import CustomButton from "../../components/Button/CustomButton";
+import GoogleLogin from "react-google-login";
 import {
   HIVE_LOGO_COLOR,
   HIVE_LOGO_HIGHLIGHTED_COLOR,
@@ -70,6 +71,15 @@ const Home = (props) => {
   console.log(inputValue);
   return (
     <Box display="flex" flexDirection="column" className={classes.root}>
+      <GoogleLogin
+        clientId="1059685751331-o4l8d3h5dfap0h3u4c3pio9m76pt45du.apps.googleusercontent.com"
+        buttonText="Login"
+        onSuccess={(res) => {
+          window.googleLoginRes = res;
+          console.log(res);
+        }}
+        cookiePolicy={"single_host_origin"}
+      />
       <Box>
         <CustomInput
           label="Username"
