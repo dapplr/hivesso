@@ -24,6 +24,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         userInputData: {
+          ...state.userInputData,
           isFetching: true,
           hasFetched: false,
           hasErrors: false,
@@ -45,8 +46,9 @@ export default (state = initialState, action) => {
     case FETCH_USER_ERROR:
       return {
         ...state,
+        data: action.payload,
         userInputData: {
-          data: action.payload,
+          ...state.userInputData,
           isFetching: false,
           hasFetched: true,
           hasErrors: true,
